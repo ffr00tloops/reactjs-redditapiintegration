@@ -126,7 +126,8 @@
                     {posts.slice(0,4).map(post => (
                     <div className="col">
                         <div className="card shadow-sm" style={{width: "18rem", backgroundColor:"#967386", color: "white" , display: "block", marginLeft:"auto" ,marginRight:"auto", marginBottom:"10px"}}>
-                            <img src={post.url_overridden_by_dest}className="card-img-top"/>
+                            {_.isEmpty(post.url_overridden_by_dest)?<h1> No Image</h1>:<img src={post.url_overridden_by_dest}className="card-img-top"/>
+                            }
                             <div className="card-body">
                                 <h5 className="card-title font-weight-bold">{post.title}</h5>
                                 <p className="card-text">{post.selftext}</p>
@@ -166,10 +167,12 @@
                     {posts.slice(0,4).map(post => (
                     <div className="col">
                         <div className="card shadow-sm" style={{width: "18rem", backgroundColor:"#967386", color: "white" , display: "block", marginLeft:"auto" ,marginRight:"auto", marginBottom:"10px"}}>
-                            <img src={post.url_overridden_by_dest}className="card-img-top"/>
+                            {_.isEmpty(post.url_overridden_by_dest)?<h1> No Image</h1>:<img src={post.url_overridden_by_dest}className="card-img-top"/>
+                            }
                             <div className="card-body">
                                 <h5 className="card-title font-weight-bold">{post.title}</h5>
                                 <p className="card-text">{post.selftext}</p>
+                                
                                 <a href={`https://www.reddit.com/${post.permalink}`} className="btn btn-secondary">Visit Post</a>
                             </div>
                         </div>
@@ -206,7 +209,8 @@
                     {posts.slice(0,4).map(post => (
                     <div className="col">
                         <div className="card shadow-sm" style={{width: "18rem", backgroundColor:"#967386", color: "white" , display: "block", marginLeft:"auto" ,marginRight:"auto", marginBottom:"10px"}}>
-                            <img src={post.url_overridden_by_dest}className="card-img-top"/>
+                            {_.isEmpty(post.url_overridden_by_dest)?<h1> No Image</h1>:<img src={post.url_overridden_by_dest}className="card-img-top"/>
+                            }
                             <div className="card-body">
                                 <h5 className="card-title font-weight-bold">{post.title}</h5>
                                 <p className="card-text">{post.selftext}</p>
